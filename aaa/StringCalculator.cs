@@ -31,6 +31,9 @@ namespace aaa
         {
             char znak = ',';
             string dalimiter;
+            dalimiter = "";
+            dalimiter = "a";
+            dalimiter = "";
             if (numbers.StartsWith("//["))
             {
                 dalimiter = numbers.Substring(numbers.IndexOf("//[") + 3, numbers.IndexOf("]") - (numbers.IndexOf("//[") + 3));
