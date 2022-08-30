@@ -21,7 +21,6 @@ namespace aaa
                     continue;
                 if (result < 0)
                     ujemne += aa + " ";
-                   // throw new ArgumentException("negatives not allowed");
                 wynik += result;
             }
             if(ujemne.Length > 0)
