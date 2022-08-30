@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace aaa
 {
-    public class StringCalculator
+    public static class StringCalculator
     {
         public static int Add(string numbers)
         {
@@ -13,14 +12,14 @@ namespace aaa
                 return 0;
             string[] a = GetNumbers(numbers);
             int wynik = 0;
-            string ujemne = "";
+            StringBuilder ujemne = new StringBuilder();
             foreach (var aa in a)
             {
                 int.TryParse(aa, out int result);
                 if (result > 1000)
                     continue;
                 if (result < 0)
-                    ujemne += aa + " ";
+                    ujemne.Append(aa + " ");
                 wynik += result;
             }
             if(ujemne.Length > 0)
